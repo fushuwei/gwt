@@ -22,33 +22,9 @@ mvn verify
 
 ```
 Connected to the target VM, address: '127.0.0.1:64151', transport: 'socket'
-19-Jan-2023 00:04:55.610 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/8.5.84
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Nov 16 2022 13:34:24 UTC
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      8.5.84.0
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     D:\Software\Java\jdk1.8.0_162\jre
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_162-b12
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
-19-Jan-2023 00:04:55.613 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     C:\Users\Administrator\AppData\Local\JetBrains\IntelliJIdea2022.1\tomcat\e56263d6-e419-4fc2-a165-294aee47e33d
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     D:\Software\apache-tomcat-8.5.84
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=C:\Users\Administrator\AppData\Local\JetBrains\IntelliJIdea2022.1\tomcat\e56263d6-e419-4fc2-a165-294aee47e33d\conf\logging.properties
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:64151,suspend=y,server=n
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -javaagent:C:\Users\Administrator\AppData\Local\JetBrains\IntelliJIdea2022.1\captureAgent\debugger-agent.jar
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcom.sun.management.jmxremote=
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcom.sun.management.jmxremote.port=1099
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcom.sun.management.jmxremote.ssl=false
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcom.sun.management.jmxremote.password.file=C:\Users\Administrator\AppData\Local\JetBrains\IntelliJIdea2022.1\tomcat\e56263d6-e419-4fc2-a165-294aee47e33d\jmxremote.password
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcom.sun.management.jmxremote.access.file=C:\Users\Administrator\AppData\Local\JetBrains\IntelliJIdea2022.1\tomcat\e56263d6-e419-4fc2-a165-294aee47e33d\jmxremote.access
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.rmi.server.hostname=127.0.0.1
-19-Jan-2023 00:04:55.614 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
-19-Jan-2023 00:04:55.615 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
-19-Jan-2023 00:04:55.615 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
-19-Jan-2023 00:04:55.615 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=C:\Users\Administrator\AppData\Local\JetBrains\IntelliJIdea2022.1\tomcat\e56263d6-e419-4fc2-a165-294aee47e33d
-19-Jan-2023 00:04:55.615 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=D:\Software\apache-tomcat-8.5.84
-19-Jan-2023 00:04:55.615 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=D:\Software\apache-tomcat-8.5.84\temp
+
+省略...
+
 19-Jan-2023 00:04:55.615 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 使用APR版本[1.7.0]加载了基于APR的Apache Tomcat本机库[1.2.35]。
 19-Jan-2023 00:04:55.615 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR功能：IPv6[true]、sendfile[true]、accept filters[false]、random[true]、UDS [{4}]。
 19-Jan-2023 00:04:55.615 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL配置：useAprConnector[false]，useOpenSSL[true]
