@@ -67,9 +67,8 @@
                 </executions>
                 <configuration>
                     <moduleName>com.mochousoft.gwt.basic.App</moduleName>
-                    <moduleShortName>app</moduleShortName>
                     <failOnError>true</failOnError>
-                    <!-- GWT compiler requires 1.8 -->
+                    <!-- GWT compiler 2.10.0+ requires java 1.8+ -->
                     <sourceLevel>${maven.compiler.source}</sourceLevel>
                     <!-- Compiler configuration -->
                     <compilerArgs>
@@ -82,7 +81,7 @@
                     <classpathScope>compile+runtime</classpathScope>
                     <!-- URL(s) that should be opened by DevMode (gwt:devmode). -->
                     <startupUrls>
-                        <startupUrl>index.html</startupUrl>
+                        <startupUrl>basic</startupUrl>
                     </startupUrls>
                 </configuration>
             </plugin>

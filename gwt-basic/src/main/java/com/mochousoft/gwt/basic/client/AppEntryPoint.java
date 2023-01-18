@@ -18,7 +18,7 @@ import com.mochousoft.gwt.basic.shared.MessageService;
 import com.mochousoft.gwt.basic.shared.MessageServiceAsync;
 
 /**
- * todo
+ * Entry point classes define <code>onModuleLoad()</code>.
  *
  * @author fushuwei
  */

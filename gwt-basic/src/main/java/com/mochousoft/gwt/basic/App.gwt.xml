@@ -5,7 +5,7 @@
 -->
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.10.0//EN"
     "http://gwtproject.org/doctype/2.10.0/gwt-module.dtd">
-<module rename-to='google_web_toolkit'>
+<module rename-to='basic'>
     <!-- Inherit the core Web Toolkit stuff. -->
     <inherits name='com.google.gwt.user.User'/>
 
