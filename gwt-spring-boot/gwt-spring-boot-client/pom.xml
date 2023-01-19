@@ -17,6 +17,13 @@
     </properties>
 
     <dependencies>
+        <!-- 公共模块 -->
+        <dependency>
+            <groupId>com.mochousoft</groupId>
+            <artifactId>gwt-spring-boot-shared</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!-- GWT -->
         <dependency>
             <groupId>com.google.gwt</groupId>
@@ -41,7 +48,7 @@
     <build>
         <!-- Output classes directly into the webapp, -->
         <!-- so that IDEs and "mvn process-classes" update them in DevMode -->
-        <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
+        <!-- <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory> -->
 
         <plugins>
             <!-- GWT Maven Plugin -->
