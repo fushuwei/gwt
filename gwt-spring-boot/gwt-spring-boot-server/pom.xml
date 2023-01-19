@@ -32,21 +32,13 @@
         <!-- GWT -->
         <dependency>
             <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-servlet</artifactId>
-            <version>${gwt.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
-            <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
         <!-- GWT 的 server 模块不能依赖 gwt-dev, 否则启动服务报错: \.m2\repository\xalan\xalan\2.7.2\serializer.jar (系统找不到指定的文件。) -->
         <!-- <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-dev</artifactId>
-            <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency> -->
     </dependencies>

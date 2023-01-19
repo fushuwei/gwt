@@ -12,7 +12,6 @@
     <artifactId>gwt-spring-boot-client</artifactId>
 
     <properties>
-        <gwt.version>2.10.0</gwt.version>
         <gwt-maven-plugin.version>1.0.1</gwt-maven-plugin.version>
     </properties>
 
@@ -21,26 +20,24 @@
         <dependency>
             <groupId>com.mochousoft</groupId>
             <artifactId>gwt-spring-boot-shared</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mochousoft</groupId>
+            <artifactId>gwt-spring-boot-shared</artifactId>
+            <version>${project.version}</version>
+            <classifier>sources</classifier>
         </dependency>
 
         <!-- GWT -->
         <dependency>
             <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-servlet</artifactId>
-            <version>${gwt.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
-            <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-dev</artifactId>
-            <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -65,9 +62,9 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <moduleName>com.mochousoft.gwt.basic.Basic</moduleName>
+                    <moduleName>com.mochousoft.gwt.GWTSpringBoot</moduleName>
                     <failOnError>true</failOnError>
-                    <!-- GWT compiler 2.10.0+ requires java 1.8+ -->
+                    <!-- GWT compiler 2.8 requires 1.8, hence define sourceLevel here if you use a different source language for java compilation -->
                     <sourceLevel>${maven.compiler.source}</sourceLevel>
                     <!-- Compiler configuration -->
                     <compilerArgs>
@@ -80,16 +77,8 @@
                     <classpathScope>compile+runtime</classpathScope>
                     <!-- URL(s) that should be opened by DevMode (gwt:devmode). -->
                     <startupUrls>
-                        <startupUrl>basic</startupUrl>
+                        <startupUrl>gwtspringboot</startupUrl>
                     </startupUrls>
-                </configuration>
-            </plugin>
-
-            <!-- Skip normal test execution, we use gwt:test instead -->
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>

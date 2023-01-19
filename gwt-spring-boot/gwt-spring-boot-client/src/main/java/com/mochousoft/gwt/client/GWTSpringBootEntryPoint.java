@@ -22,7 +22,7 @@ import com.mochousoft.gwt.shared.MessageServiceAsync;
  *
  * @author fushuwei
  */
-public class BasicEntryPoint implements EntryPoint {
+public class GWTSpringBootEntryPoint implements EntryPoint {
 
     private final MessageServiceAsync messageServiceAsync = GWT.create(MessageService.class);
 
