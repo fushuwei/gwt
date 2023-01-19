@@ -21,7 +21,6 @@
 
     <modules>
         <module>gwt-basic</module>
-        <module>gwt-basic-advanced</module>
     </modules>
 
     <dependencyManagement>
