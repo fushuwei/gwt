@@ -10,7 +10,7 @@
     <inherits name='com.google.gwt.user.User'/>
 
     <!-- Shared -->
-    <inherits name="com.mochousoft.gwt.Shared"/>
+    <!-- <inherits name="com.mochousoft.gwt.Shared"/> -->
 
     <!--
         Inherit the default GWT style sheet. You can change

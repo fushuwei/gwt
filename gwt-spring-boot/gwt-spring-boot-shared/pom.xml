@@ -11,10 +11,6 @@
 
     <artifactId>gwt-spring-boot-shared</artifactId>
 
-    <properties>
-        <gwt.version>2.10.0</gwt.version>
-    </properties>
-
     <dependencies>
         <!-- GWT -->
         <dependency>
@@ -39,8 +35,9 @@
                 <executions>
                     <execution>
                         <id>attach-sources</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>jar-no-fork</goal>
                         </goals>
                     </execution>
                 </executions>

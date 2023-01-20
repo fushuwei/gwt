@@ -11,10 +11,6 @@
 
     <artifactId>gwt-spring-boot-client</artifactId>
 
-    <properties>
-        <gwt-maven-plugin.version>1.0.1</gwt-maven-plugin.version>
-    </properties>
-
     <dependencies>
         <!-- 公共模块 -->
         <dependency>
