@@ -21,7 +21,6 @@
 
     <modules>
         <module>gwt-basic</module>
-        <module>gwt-spring-boot</module>
     </modules>
 
     <dependencyManagement>
