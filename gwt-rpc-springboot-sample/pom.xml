@@ -28,6 +28,7 @@
     </properties>
 
     <modules>
+        <module>gwt-rpc-springboot-sample-client</module>
         <module>gwt-rpc-springboot-sample-shared</module>
     </modules>
 
