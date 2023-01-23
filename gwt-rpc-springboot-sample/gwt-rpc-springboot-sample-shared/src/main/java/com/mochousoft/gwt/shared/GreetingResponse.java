@@ -1,0 +1,39 @@
+package com.mochousoft.gwt.shared;
+
+import com.google.gwt.user.client.rpc.IsSerializable;
+
+/**
+ * 打招呼的响应类
+ *
+ * @author fushuwei
+ */
+@SuppressWarnings("serial")
+public class GreetingResponse implements IsSerializable {
+    private String greeting;
+    private String serverInfo;
+    private String userAgent;
+
+    public String getGreeting() {
+        return greeting;
+    }
+
+    public void setGreeting(String greeting) {
+        this.greeting = greeting;
+    }
+
+    public String getServerInfo() {
+        return serverInfo;
+    }
+
+    public void setServerInfo(String serverInfo) {
+        this.serverInfo = serverInfo;
+    }
+
+    public String getUserAgent() {
+        return userAgent;
+    }
+
+    public void setUserAgent(String userAgent) {
+        this.userAgent = userAgent;
+    }
+}
