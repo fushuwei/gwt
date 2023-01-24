@@ -30,6 +30,7 @@
     <modules>
         <module>gwt-rpc-springboot-sample-client</module>
         <module>gwt-rpc-springboot-sample-shared</module>
+        <module>gwt-rpc-springboot-sample-server</module>
     </modules>
 
     <dependencyManagement>
