@@ -91,6 +91,10 @@
                     <configuration>
                         <sourceLevel>1.8</sourceLevel>
                         <failOnError>true</failOnError>
+                        <devmodeArgs>
+                            <arg>-port</arg>
+                            <arg>8888</arg>
+                        </devmodeArgs>
                     </configuration>
                 </plugin>
 
