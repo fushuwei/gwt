@@ -10,7 +10,6 @@
 
     <modules>
         <module>gwt-rpc-springboot-basic</module>
-        <module>gwt-rpc-springboot-sample</module>
         <module>gwt-rest-springboot-basic</module>
     </modules>
 
