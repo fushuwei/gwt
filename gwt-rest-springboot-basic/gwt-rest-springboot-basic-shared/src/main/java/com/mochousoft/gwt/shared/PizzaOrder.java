@@ -16,20 +16,19 @@
  * limitations under the License.
  */
 
-package com.mochousoft.gwt.client;
+package com.mochousoft.gwt.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gwt.core.client.GWT;
+import org.fusesource.restygwt.client.Json;
+import org.fusesource.restygwt.client.JsonEncoderDecoder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.fusesource.restygwt.client.Json;
-import org.fusesource.restygwt.client.JsonEncoderDecoder;
-
 /**
  *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
+ * @author fushuwei
  */
 public class PizzaOrder {
 

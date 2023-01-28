@@ -1,4 +1,4 @@
-package com.mochousoft.gwt.client;
+package com.mochousoft.gwt.shared;
 
 public class ThinCrust implements Crust {
 

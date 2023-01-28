@@ -33,6 +33,7 @@
 
     <modules>
         <module>gwt-rest-springboot-basic-client</module>
+        <module>gwt-rest-springboot-basic-shared</module>
         <module>gwt-rest-springboot-basic-server</module>
     </modules>
 
@@ -92,6 +93,7 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!-- GWT Maven Plugin -->
                 <plugin>
                     <groupId>net.ltgt.gwt.maven</groupId>
                     <artifactId>gwt-maven-plugin</artifactId>
@@ -103,6 +105,22 @@
                             <arg>8888</arg>
                         </devmodeArgs>
                     </configuration>
+                </plugin>
+
+                <!-- Maven Source Plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>

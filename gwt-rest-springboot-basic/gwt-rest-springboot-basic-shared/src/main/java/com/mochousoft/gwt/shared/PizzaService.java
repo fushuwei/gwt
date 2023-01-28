@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-package com.mochousoft.gwt.client;
+package com.mochousoft.gwt.shared;
 
-import java.util.List;
-import java.util.Map;
+import org.fusesource.restygwt.client.MethodCallback;
+import org.fusesource.restygwt.client.RestService;
 
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -28,13 +28,12 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
-import org.fusesource.restygwt.client.MethodCallback;
-import org.fusesource.restygwt.client.RestService;
+import java.util.List;
+import java.util.Map;
 
 /**
  *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
+ * @author fushuwei
  */
 @Path("/pizza-service")
 public interface PizzaService extends RestService {

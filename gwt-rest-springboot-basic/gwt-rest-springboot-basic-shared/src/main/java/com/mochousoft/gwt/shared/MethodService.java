@@ -16,7 +16,10 @@
  * limitations under the License.
  */
 
-package com.mochousoft.gwt.client;
+package com.mochousoft.gwt.shared;
+
+import org.fusesource.restygwt.client.MethodCallback;
+import org.fusesource.restygwt.client.RestService;
 
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -26,12 +29,9 @@ import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 
-import org.fusesource.restygwt.client.MethodCallback;
-import org.fusesource.restygwt.client.RestService;
-
 /**
  *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
+ * @author fushuwei
  */
 @Path("/test/method")
 public interface MethodService extends RestService {

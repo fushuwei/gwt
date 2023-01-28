@@ -16,24 +16,4 @@
  * limitations under the License.
  */
 
-package com.mochousoft.gwt.client;
-
-/**
- * <p>
- * </p>
- *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
- */
-public class Topping {
-
-    public String name;
-    public Double price;
-
-    public Topping() {
-    }
-
-    public Topping(String name, double price) {
-        this.name = name;
-        this.price = price;
-    }
-}
+/** Add css rules here for your application. */

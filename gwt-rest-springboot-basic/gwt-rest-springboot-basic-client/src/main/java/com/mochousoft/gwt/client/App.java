@@ -11,6 +11,11 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 
+import com.mochousoft.gwt.shared.MethodService;
+import com.mochousoft.gwt.shared.OrderConfirmation;
+import com.mochousoft.gwt.shared.Pizza;
+import com.mochousoft.gwt.shared.PizzaOrder;
+import com.mochousoft.gwt.shared.PizzaService;
 import org.fusesource.restygwt.client.JsonCallback;
 import org.fusesource.restygwt.client.Method;
 import org.fusesource.restygwt.client.MethodCallback;

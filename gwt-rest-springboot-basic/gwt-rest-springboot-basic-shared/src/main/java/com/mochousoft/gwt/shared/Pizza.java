@@ -16,14 +16,14 @@
  * limitations under the License.
  */
 
-package com.mochousoft.gwt.client;
+package com.mochousoft.gwt.shared;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
+ * @author fushuwei
  */
 public class Pizza {
 

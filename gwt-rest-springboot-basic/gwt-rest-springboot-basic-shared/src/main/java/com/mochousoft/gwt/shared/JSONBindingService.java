@@ -16,21 +16,20 @@
  * limitations under the License.
  */
 
-package com.mochousoft.gwt.client;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+package com.mochousoft.gwt.shared;
 
 import org.fusesource.restygwt.client.MethodCallback;
 import org.fusesource.restygwt.client.RestService;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
+ * @author fushuwei
  */
 @Path("/test/JSONBinding")
 public interface JSONBindingService extends RestService {

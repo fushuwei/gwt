@@ -16,15 +16,14 @@
  * limitations under the License.
  */
 
-package com.mochousoft.gwt.client;
+package com.mochousoft.gwt.shared;
 
 import com.google.gwt.core.client.GWT;
-
 import org.fusesource.restygwt.client.JsonEncoderDecoder;
 
 /**
  *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
+ * @author fushuwei
  */
 public class OrderConfirmation {
 

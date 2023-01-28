@@ -1,4 +1,4 @@
-package com.mochousoft.gwt.client;
+package com.mochousoft.gwt.shared;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
