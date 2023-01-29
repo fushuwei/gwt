@@ -19,6 +19,12 @@
             <artifactId>gwt-rest-springboot-basic-shared</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.mochousoft</groupId>
+            <artifactId>gwt-rest-springboot-basic-shared</artifactId>
+            <version>${project.version}</version>
+            <classifier>sources</classifier>
+        </dependency>
 
         <!-- GWT -->
         <dependency>

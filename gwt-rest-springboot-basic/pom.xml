@@ -91,8 +91,32 @@
     </dependencyManagement>
 
     <build>
+        <plugins>
+            <!-- GWT Maven Plugin -->
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <launcherDir>${basedir}/gwt-rest-springboot-basic-server/target/classes/launcherDir/</launcherDir>
+                </configuration>
+            </plugin>
+        </plugins>
+
         <pluginManagement>
             <plugins>
+                <!-- Maven Compiler Plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+
                 <!-- GWT Maven Plugin -->
                 <plugin>
                     <groupId>net.ltgt.gwt.maven</groupId>
@@ -100,6 +124,8 @@
                     <version>${gwt-maven-plugin.version}</version>
                     <extensions>true</extensions>
                     <configuration>
+                        <sourceLevel>1.8</sourceLevel>
+                        <failOnError>true</failOnError>
                         <devmodeArgs>
                             <arg>-port</arg>
                             <arg>8888</arg>
@@ -121,6 +147,22 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+
+                <!-- Spring Boot Maven Plugin -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+
+                <!-- Maven WAR Plugin -->
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven-war-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
