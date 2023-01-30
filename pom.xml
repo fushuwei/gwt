@@ -11,6 +11,7 @@
     <modules>
         <module>gwt-rpc-springboot-basic</module>
         <module>gwt-rest-springboot-basic</module>
+        <module>gwt-boot-basic</module>
     </modules>
 
 </project>
