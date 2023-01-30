@@ -138,6 +138,9 @@
                             <arg>-port</arg>
                             <arg>8888</arg>
                         </devmodeArgs>
+                        <!-- <jvmArgs>
+                            <arg>-agentlib:jdwp=transport=dt_socket,address=localhost:8080,server=y,suspend=y</arg>
+                        </jvmArgs> -->
                     </configuration>
                 </plugin>
 
