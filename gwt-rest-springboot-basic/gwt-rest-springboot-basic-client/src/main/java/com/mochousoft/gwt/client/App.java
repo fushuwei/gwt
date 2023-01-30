@@ -49,7 +49,7 @@ public class App implements EntryPoint {
         });
         RootPanel.get().add(button);
 
-        button = new Button("Do A Search on Yahoo /w Jsonp");
+        button = new Button("Baidu Jsonp Api");
         button.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -62,6 +62,8 @@ public class App implements EntryPoint {
 
     protected void doPut() {
         MethodService service = GWT.create(MethodService.class);
+        Resource resource = new Resource("/test/method");
+        ((RestServiceProxy) service).setResource(resource);
         service.put(new MethodCallback<String>() {
             @Override
             public void onFailure(Method method, Throwable exception) {
@@ -77,7 +79,7 @@ public class App implements EntryPoint {
 
     private void placeOrder() {
         PizzaService service = GWT.create(PizzaService.class);
-        Resource resource = new Resource(GWT.getModuleBaseURL() + "pizza-service");
+        Resource resource = new Resource("pizza-service");
         ((RestServiceProxy) service).setResource(resource);
 
         PizzaOrder order = new PizzaOrder();
@@ -114,9 +116,7 @@ public class App implements EntryPoint {
     }
 
     protected void doJsonp() {
-        Resource resource = new Resource(
-            "http://search.yahooapis.com/WebSearchService/V1/webSearch?appid=YahooDemo&query=finances&format=pdf" +
-                "&output=json&callback=callback");
+        Resource resource = new Resource("http://127.0.0.1:8080/jsonp-service?callback=list");
         resource.jsonp().send(new JsonCallback() {
             @Override
             public void onSuccess(Method method, JSONValue response) {
