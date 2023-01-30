@@ -5,13 +5,13 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONString;
 import com.google.gwt.json.client.JSONValue;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 
-import com.mochousoft.gwt.shared.MethodService;
 import com.mochousoft.gwt.shared.OrderConfirmation;
 import com.mochousoft.gwt.shared.Pizza;
 import com.mochousoft.gwt.shared.PizzaOrder;
@@ -31,7 +31,7 @@ public class App implements EntryPoint {
      * This is the entry point method.
      */
     public void onModuleLoad() {
-        Button button = new Button("Place Pizza Order");
+        Button button = new Button("测试 Rest 请求");
         button.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -40,7 +40,7 @@ public class App implements EntryPoint {
         });
         RootPanel.get().add(button);
 
-        button = new Button("Do Put");
+        button = new Button("测试 Http 请求");
         button.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -49,7 +49,7 @@ public class App implements EntryPoint {
         });
         RootPanel.get().add(button);
 
-        button = new Button("Baidu Jsonp Api");
+        button = new Button("测试 Jsonp 接口");
         button.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -58,23 +58,6 @@ public class App implements EntryPoint {
         });
 
         RootPanel.get().add(button);
-    }
-
-    protected void doPut() {
-        MethodService service = GWT.create(MethodService.class);
-        Resource resource = new Resource("/test/method");
-        ((RestServiceProxy) service).setResource(resource);
-        service.put(new MethodCallback<String>() {
-            @Override
-            public void onFailure(Method method, Throwable exception) {
-                Window.alert("Error x: " + exception);
-            }
-
-            @Override
-            public void onSuccess(Method method, String response) {
-                RootPanel.get().add(new Label("done."));
-            }
-        });
     }
 
     private void placeOrder() {
@@ -113,6 +96,13 @@ public class App implements EntryPoint {
                 Window.alert("Error: " + exception);
             }
         });
+    }
+
+    protected void doPut() {
+        JSONObject jObj = new JSONObject();
+        jObj.put("p1", new JSONString("参数1"));
+        jObj.put("p2", new JSONString("参数2"));
+        ClientUtils.get("/pizza-service", jObj);
     }
 
     protected void doJsonp() {
