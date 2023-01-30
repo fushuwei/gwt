@@ -12,17 +12,18 @@ http://localhost:8888
 
 ## Debugging GWT in IDEA
 
-1. Allow unsigned requests
+1. Edit Configurations -> JavaScript Debug -> URL
+
+```
+http://localhost:8888/app/
+or
+http://localhost:63342/gwt/gwt-boot-basic/target/gwt/devmode/war/app/index.html
+```
+
+2. Allow unsigned requests (Optional, Must be configured only when first step config url as http://<span></span>localhost:63342/...)
 
 ```
 Settings -> Build, Execution, Deployment -> Debugger -> Allow unsigned requests
-```
-
-2. Edit Configurations -> JavaScript Debug
-
-```
-URL:
-http://localhost:63342/gwt/gwt-boot-basic/target/gwt/devmode/war/app/index.html
 ```
 
 3. Config local-remote-mapping (Optional),
