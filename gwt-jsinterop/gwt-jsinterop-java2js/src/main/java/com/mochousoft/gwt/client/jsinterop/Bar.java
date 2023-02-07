@@ -1,6 +1,5 @@
 package com.mochousoft.gwt.client.jsinterop;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -8,8 +7,8 @@ import jsinterop.annotations.JsType;
  *
  * @author fushuwei
  */
-@JsType
-public class Foo {
+@JsType(name = "RenameBar")
+public class Bar {
     public int x;
     public int y;
 

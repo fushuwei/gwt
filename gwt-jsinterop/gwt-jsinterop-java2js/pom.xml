@@ -60,14 +60,9 @@
                     <startupUrls>
                         <url>/app/</url>
                     </startupUrls>
-                    <compilerArgs>
-                        <compileArg>-XjsInteropMode</compileArg>
-                        <compileArg>JS</compileArg>
-                    </compilerArgs>
-                    <codeserverArgs>
-                        <arg>-XjsInteropMode</arg>
-                        <arg>JS</arg>
-                    </codeserverArgs>
+                    <devmodeArgs>
+                        <arg>-generateJsInteropExports</arg>
+                    </devmodeArgs>
                 </configuration>
             </plugin>
         </plugins>
