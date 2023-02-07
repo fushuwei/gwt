@@ -3,16 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mochousoft</groupId>
-    <artifactId>gwt</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <parent>
+        <groupId>com.mochousoft</groupId>
+        <artifactId>gwt</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>gwt-jsinterop</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>gwt-rpc-springboot-basic</module>
-        <module>gwt-rest-springboot-basic</module>
-        <module>gwt-jsinterop</module>
-        <module>gwt-boot-basic</module>
+        <module>gwt-jsinterop-java2js</module>
+        <module>gwt-jsinterop-js2java</module>
     </modules>
 
 </project>
