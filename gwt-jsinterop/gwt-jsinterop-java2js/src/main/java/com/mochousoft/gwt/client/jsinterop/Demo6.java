@@ -8,8 +8,8 @@ import jsinterop.annotations.JsType;
  *
  * @author fushuwei
  */
-@JsType
-public class Foo {
+@JsType(name = "RenameDemo6", namespace = JsPackage.GLOBAL)
+public class Demo6 {
     public int x;
     public int y;
 

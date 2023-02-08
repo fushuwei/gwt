@@ -62,14 +62,56 @@
     </div>
 </noscript>
 
-<div id="btnFoo" onclick="foo()"></div>
+<h1>Exporting a Java type to JavaScript</h1>
+
+<span id="button1" onclick="demo1()"></span>
+<span id="button2" onclick="demo2()"></span>
+<span id="button3" onclick="demo3()"></span>
+<span id="button4" onclick="demo4()"></span>
+<span id="button5" onclick="demo5()"></span>
+<span id="button6" onclick="demo6()"></span>
 
 <script>
-    function foo() {
-        var foo = new com.mochousoft.gwt.client.jsinterop.Foo();
-        foo.x = Math.random();
-        foo.y = Math.random();
-        console.log(foo.sum());
+    function demo1() {
+        var demo = new com.mochousoft.gwt.client.jsinterop.Demo1();
+        demo.x = Math.random();
+        demo.y = Math.random();
+        console.log(demo.sum());
+    }
+
+    function demo2() {
+        var demo = new com.mochousoft.gwt.client.jsinterop.Demo2();
+        demo.x = Math.random();
+        demo.y = Math.random();
+        console.log(demo.sum());
+    }
+
+    function demo3() {
+        var demo = new com.mochousoft.gwt.client.jsinterop.RenameDemo3();
+        demo.x = Math.random();
+        demo.y = Math.random();
+        console.log(demo.sum());
+    }
+
+    function demo4() {
+        var demo = new Demo4();
+        demo.x = Math.random();
+        demo.y = Math.random();
+        console.log(demo.sum());
+    }
+
+    function demo5() {
+        var demo = new gwt.jsinterop.Demo5();
+        demo.x = Math.random();
+        demo.y = Math.random();
+        console.log(demo.sum());
+    }
+
+    function demo6() {
+        var demo = new RenameDemo6();
+        demo.x = Math.random();
+        demo.y = Math.random();
+        console.log(demo.sum());
     }
 </script>
 
