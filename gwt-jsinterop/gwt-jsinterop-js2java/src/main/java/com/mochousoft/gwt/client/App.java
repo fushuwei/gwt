@@ -18,7 +18,6 @@ public class App implements EntryPoint {
 
     @Override
     public void onModuleLoad() {
-
         L.map("map").setView(positions, 13);
     }
 }

@@ -60,6 +60,9 @@
                     <startupUrls>
                         <url>/app/</url>
                     </startupUrls>
+                    <devmodeArgs>
+                        <arg>-generateJsInteropExports</arg>
+                    </devmodeArgs>
                 </configuration>
             </plugin>
         </plugins>

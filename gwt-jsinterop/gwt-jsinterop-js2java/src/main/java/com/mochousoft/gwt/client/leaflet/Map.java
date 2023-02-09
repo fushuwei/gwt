@@ -1,6 +1,5 @@
 package com.mochousoft.gwt.client.leaflet;
 
-import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
 /**
@@ -8,9 +7,8 @@ import jsinterop.annotations.JsType;
  *
  * @author fushuwei
  */
-@JsType(isNative = true)
+@JsType(isNative = true, namespace = "L")
 public class Map {
 
-    @JsMethod
     public native L setView(double[] center, int zoom);
 }
