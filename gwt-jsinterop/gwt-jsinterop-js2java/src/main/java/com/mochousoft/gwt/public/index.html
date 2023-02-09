@@ -25,7 +25,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-    <!-- leaflet -->
+    <!-- Leaflet Javascript and Styles - a base map library stuff -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
@@ -66,8 +66,23 @@
     </div>
 </noscript>
 
-<h1>Leaflet</h1>
-<div id="map" style="height: 180px;"></div>
+<h3>GWT JsInterop 方式调用 Leaflet</h3>
+<div id="map" style="height: 300px;"></div>
+<h3>原生 JS 方式调用 Leaflet</h3>
+<div id="map2" style="height: 300px;"></div>
+
+<script>
+    // 构建地图，设置默认显示的经纬度区域（北纬：39.90，东经：116.391）
+    var map = L.map('map2').setView([39.90, 116.391], 13);
+
+    // 版权信息
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://github.com/fushuwei">fushuwei</a> contributors'
+    }).addTo(map);
+
+    // 指定一个经纬度坐标
+    L.marker([39.91, 116.391]).addTo(map).bindPopup('中国 · 北京').openPopup();
+</script>
 
 </body>
 </html>

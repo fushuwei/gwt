@@ -14,7 +14,7 @@ public class App implements EntryPoint {
 
     private static final Logger logger = Logger.getLogger(App.class.getName());
 
-    double[] positions = {51.505, -0.09};
+    double[] positions = {39.90, 116.391};
 
     @Override
     public void onModuleLoad() {
