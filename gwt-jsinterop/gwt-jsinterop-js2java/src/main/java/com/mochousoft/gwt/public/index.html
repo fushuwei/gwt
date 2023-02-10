@@ -73,15 +73,15 @@
 
 <script>
     // 构建地图，设置默认显示的经纬度区域（北纬：39.90，东经：116.391）
-    var map = L.map('map2').setView([39.90, 116.391], 13);
+    var map2 = L.map('map2').setView([39.90, 116.391], 13);
 
     // 版权信息
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://github.com/fushuwei">fushuwei</a> contributors'
-    }).addTo(map);
+    }).addTo(map2);
 
     // 指定一个经纬度坐标
-    L.marker([39.91, 116.391]).addTo(map).bindPopup('中国 · 北京').openPopup();
+    L.marker([39.91, 116.391]).addTo(map2).bindPopup('中国 · 北京').openPopup();
 </script>
 
 </body>
