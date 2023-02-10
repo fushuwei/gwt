@@ -1,6 +1,8 @@
 package com.mochousoft.gwt.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.RootPanel;
@@ -29,6 +31,7 @@ public class App implements EntryPoint {
         HTML button4 = new HTML("<button id='button4' onclick='demo4()'>自定义类型命名空间：JsPackage.GLOBAL</button>");
         HTML button5 = new HTML("<button id='button5' onclick='demo5()'>自定义类型命名空间：任意字符串</button>");
         HTML button6 = new HTML("<button id='button6' onclick='demo6()'>自定义类型名称 + 自定义类型命名空间</button>");
+        Button button7 = new Button("GWT JSNI", (ClickHandler) clickEvent -> demo7());
 
         // 水平面板
         HorizontalPanel hPanel = new HorizontalPanel();
@@ -39,6 +42,7 @@ public class App implements EntryPoint {
         hPanel.add(button4);
         hPanel.add(button5);
         hPanel.add(button6);
+        hPanel.add(button7);
 
         // 垂直面板
         VerticalPanel vPanel = new VerticalPanel();
@@ -47,4 +51,8 @@ public class App implements EntryPoint {
 
         RootPanel.get().add(vPanel);
     }
+
+    public static native void demo7() /*-{
+        $wnd.alert("在 JSNI 方法中不能使用 JsInterop")
+    }-*/;
 }
