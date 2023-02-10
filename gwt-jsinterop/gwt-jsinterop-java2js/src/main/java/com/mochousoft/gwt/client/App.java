@@ -25,8 +25,8 @@ public class App implements EntryPoint {
         HTML title = new HTML("<h1>Exporting a Java type to JavaScript</h1>");
 
         // 按钮
-        HTML button1 = new HTML("<button id='button1' onclick='demo1()'>方法无public修饰符</button>");
-        HTML button2 = new HTML("<button id='button2' onclick='demo2()'>默认</button>");
+        HTML button1 = new HTML("<button id='button1' onclick='demo1()'>方法无 public 修饰符</button>");
+        HTML button2 = new HTML("<button id='button2' onclick='demo2()'>默认 @JsType 参数</button>");
         HTML button3 = new HTML("<button id='button3' onclick='demo3()'>自定义类型名称</button>");
         HTML button4 = new HTML("<button id='button4' onclick='demo4()'>自定义类型命名空间：JsPackage.GLOBAL</button>");
         HTML button5 = new HTML("<button id='button5' onclick='demo5()'>自定义类型命名空间：任意字符串</button>");
