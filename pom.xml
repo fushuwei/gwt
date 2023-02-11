@@ -14,6 +14,7 @@
         <module>gwt-jsinterop</module>
         <module>gwt-boot-basic</module>
         <module>gwt-widget</module>
+        <module>gwt-ui</module>
         <module>gwt-project</module>
     </modules>
 
