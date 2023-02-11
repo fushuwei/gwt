@@ -15,7 +15,6 @@
         <module>gwt-boot-basic</module>
         <module>gwt-widget</module>
         <module>gwt-ui</module>
-        <module>gwt-project</module>
     </modules>
 
 </project>
