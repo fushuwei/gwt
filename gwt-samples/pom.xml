@@ -12,4 +12,8 @@
     <artifactId>gwt-samples</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>gwt-voice</module>
+    </modules>
+
 </project>
