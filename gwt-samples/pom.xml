@@ -15,6 +15,7 @@
     <modules>
         <module>gwt-audio</module>
         <module>gwt-voice</module>
+        <module>gwt-notice</module>
     </modules>
 
 </project>
