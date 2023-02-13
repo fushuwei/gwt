@@ -7,6 +7,7 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import gwt.jelement.dom.Element;
 import gwt.jelement.webaudio.AudioContext;
 import gwt.jelement.webaudio.AudioContextState;
 import gwt.jelement.webaudio.GainNode;
@@ -14,6 +15,9 @@ import gwt.jelement.webaudio.OscillatorNode;
 import gwt.jelement.webaudio.OscillatorType;
 
 import java.util.logging.Logger;
+
+import static gwt.jelement.Browser.document;
+import static gwt.jelement.Browser.window;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -63,6 +67,12 @@ public class App implements EntryPoint {
      * 启动
      */
     private void start() {
+        boolean audioSupported = window.object().has("AudioContext");
+        if (!audioSupported) {
+            window.alert("Web audio is not supported in this browser");
+            return;
+        }
+
         audioContext = new AudioContext();
         osc = audioContext.createOscillator();
         osc.setType(OscillatorType.SQUARE);
