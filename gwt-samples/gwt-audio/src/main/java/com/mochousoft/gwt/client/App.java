@@ -62,7 +62,7 @@ public class App implements EntryPoint {
     }
 
     /**
-     * 启动
+     * 启动播放音频
      */
     private void start() {
         boolean audioSupported = window.object().has("AudioContext");
@@ -94,7 +94,7 @@ public class App implements EntryPoint {
     }
 
     /**
-     * 停止
+     * 停止播放音频
      */
     private void stop() {
         osc.stop(audioContext.getCurrentTime() + 1);
