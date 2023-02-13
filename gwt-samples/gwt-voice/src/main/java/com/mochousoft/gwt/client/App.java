@@ -1,11 +1,14 @@
 package com.mochousoft.gwt.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.SubmitButton;
+import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import gwt.jelement.core.Promise;
 import gwt.jelement.speech.SpeechSynthesisUtterance;
@@ -36,33 +39,76 @@ public class App implements EntryPoint {
         // 按钮
         Button button1 = new Button("英语", (ClickHandler) clickEvent -> speak("en-US"));
         Button button2 = new Button("汉语", (ClickHandler) clickEvent -> speak("zh-CN"));
-        Button button3 = new Button("日语", (ClickHandler) clickEvent -> speak(""));
-        Button button4 = new Button("韩语", (ClickHandler) clickEvent -> speak(""));
-        Button button5 = new Button("俄语", (ClickHandler) clickEvent -> speak(""));
-        Button button6 = new Button("法语", (ClickHandler) clickEvent -> speak("test"));
-        Button button7 = new Button("多语种混合", (ClickHandler) clickEvent -> speak("mixin"));
+        Button button3 = new Button("多语种混合", (ClickHandler) clickEvent -> speak("mixin"));
+        Button button4 = new Button("未知语言", (ClickHandler) clickEvent -> speak("unknown"));
 
-        // 水平面板
-        HorizontalPanel hPanel = new HorizontalPanel();
-        hPanel.setSpacing(10);
-        hPanel.add(button1);
-        hPanel.add(button2);
-        hPanel.add(button3);
-        hPanel.add(button4);
-        hPanel.add(button5);
-        hPanel.add(button6);
-        hPanel.add(button7);
+        // 输入框
+        TextBox textBox = new TextBox();
+        textBox.setWidth("500px");
+
+        // 提交按钮
+        SubmitButton submitButton1 = new SubmitButton("英语发音", clickEvent -> {
+            // 获取输入的内容
+            String text = textBox.getValue();
+            if (text == null || "".equals(text)) {
+                return;
+            }
+
+            // 获取 Google US English 语音
+            SpeechSynthesisVoice usVoice = getVoice("en-US", voice -> true);
+            // 获取 Google UK English Female 语音
+            SpeechSynthesisVoice femaleUKVoice = getVoice("en-GB", voice -> voice.getName().contains("Female"));
+            // 获取 Google UK English Male 语音
+            SpeechSynthesisVoice maleUKVoice = getVoice("en-GB", voice -> voice.getName().contains("Male"));
+
+            // 语音播报
+            say(text, usVoice);
+            say(text, femaleUKVoice);
+            say(text, maleUKVoice);
+        });
+        SubmitButton submitButton2 = new SubmitButton("汉语发音", clickEvent -> {
+            // 获取输入的内容
+            String text = textBox.getValue();
+            if (text == null || "".equals(text)) {
+                return;
+            }
+
+            // 获取 Microsoft Huihui 语音
+            SpeechSynthesisVoice microsoftHuihuiVoice = getVoice("zh-CN", voice -> voice.getName().contains("Microsoft Huihui"));
+            // 获取 Google 普通话语音
+            SpeechSynthesisVoice googleVoice = getVoice("zh-CN", voice -> voice.getName().contains("Google 普通话"));
+
+            // 语音播报
+            say(text, microsoftHuihuiVoice);
+            say(text, googleVoice);
+        });
+
+        // 水平面板 1
+        HorizontalPanel hPanel1 = new HorizontalPanel();
+        hPanel1.setSpacing(10);
+        hPanel1.add(button1);
+        hPanel1.add(button2);
+        hPanel1.add(button3);
+        hPanel1.add(button4);
+
+        // 水平面板 2
+        HorizontalPanel hPanel2 = new HorizontalPanel();
+        hPanel2.setSpacing(10);
+        hPanel2.add(textBox);
+        hPanel2.add(submitButton1);
+        hPanel2.add(submitButton2);
 
         // 垂直面板
         VerticalPanel vPanel = new VerticalPanel();
         vPanel.add(title);
-        vPanel.add(hPanel);
+        vPanel.add(hPanel1);
+        vPanel.add(hPanel2);
 
         RootPanel.get().add(vPanel);
     }
 
     /**
-     * 播报英语
+     * 播音
      */
     private void speak(String language) {
         if (!checkBrowser()) {
@@ -97,17 +143,20 @@ public class App implements EntryPoint {
         // 获取 Google US English 语音
         SpeechSynthesisVoice usVoice = getVoice("en-US", voice -> true);
         // 语音播报
-        say("Hello. Welcome to the speech synthesis demo.", usVoice);
+        say("Hello. Welcome to the speech synthesis demo. You sound like a robot. I think I sound better. " +
+            "Actually, everything sounds better with a British accent, don't you think?", usVoice);
 
         // 获取 Google UK English Female 语音
         SpeechSynthesisVoice femaleUKVoice = getVoice("en-GB", voice -> voice.getName().contains("Female"));
         // 语音播报
-        say("You sound like a robot. I think I sound better.", femaleUKVoice);
+        say("Hello. Welcome to the speech synthesis demo. You sound like a robot. I think I sound better. " +
+            "Actually, everything sounds better with a British accent, don't you think?", femaleUKVoice);
 
         // 获取 Google UK English Male 语音
         SpeechSynthesisVoice maleUKVoice = getVoice("en-GB", voice -> voice.getName().contains("Male"));
         // 语音播报
-        say("Actually, everything sounds better with a British accent, don't you think?", maleUKVoice);
+        say("Hello. Welcome to the speech synthesis demo. You sound like a robot. I think I sound better. " +
+            "Actually, everything sounds better with a British accent, don't you think?", maleUKVoice);
     }
 
     /**
@@ -129,16 +178,16 @@ public class App implements EntryPoint {
      * 混合语音
      */
     private void speakMixin() {
-        boolean otherLanguages = say("en-GB", "Actually, everything sounds better with a British accent, don't you think?");
-        otherLanguages = otherLanguages | say("fr", "Sur Chrome, nous pouvons parler de nombreuses langues.");
-        otherLanguages = otherLanguages | say("es-US", "Como el español por ejemplo.");
-        otherLanguages = otherLanguages | say("es-ES", "O el típico español de España.", "Yo soy de Zaragoza!");
+        say("en-GB", "Actually, everything sounds better with a British accent, don't you think?");
+        say("fr", "Sur Chrome, nous pouvons parler de nombreuses langues.");
+        say("es-US", "Como el español por ejemplo.");
+        say("es-ES", "O el típico español de España.", "Yo soy de Zaragoza!");
         say("es-US", "Que dices mujer?", "Que mi español no es típico?", "Yo soy de Monterrey, Mejico!");
-        otherLanguages = otherLanguages | say("it", "Non dimenticare di me! parlo italiano");
-        otherLanguages = otherLanguages | say("de", "Und ich spreche deutsch.");
-        otherLanguages = otherLanguages | say("zh", "我可以说中文. 您有新短消息，请注意查收");
-        otherLanguages = otherLanguages | say("ko", "나는 한국어를 할 수 있습니다.");
-        otherLanguages = otherLanguages | say("ru", "И я говорю по-русски.");
+        say("it", "Non dimenticare di me! parlo italiano");
+        say("de", "Und ich spreche deutsch.");
+        say("zh", "我可以说中文. 您有新短消息，请注意查收");
+        say("ko", "나는 한국어를 할 수 있습니다.");
+        say("ru", "И я говорю по-русски.");
         say("fr", "I can even speak English with a French accent.", "C'est amusant, ça!");
         say("fr", "Il y a aussi d'autres langues, mais ça devient un peu ennuyeux...");
         say("pt", "Ei, espere um pouco, você conseguiu ignorar o português?", " Braaaasil!", "Braaaasil!", "Braaaasil!");
