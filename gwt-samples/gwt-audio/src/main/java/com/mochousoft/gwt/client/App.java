@@ -7,7 +7,6 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import gwt.jelement.dom.Element;
 import gwt.jelement.webaudio.AudioContext;
 import gwt.jelement.webaudio.AudioContextState;
 import gwt.jelement.webaudio.GainNode;
@@ -16,7 +15,6 @@ import gwt.jelement.webaudio.OscillatorType;
 
 import java.util.logging.Logger;
 
-import static gwt.jelement.Browser.document;
 import static gwt.jelement.Browser.window;
 
 /**
@@ -49,7 +47,7 @@ public class App implements EntryPoint {
         // 设置 btnSoundOff 按钮禁用
         btnSoundOff.setEnabled(false);
 
-        // 水平面板 1
+        // 水平面板
         HorizontalPanel hPanel = new HorizontalPanel();
         hPanel.setSpacing(10);
         hPanel.add(btnSoundOn);
