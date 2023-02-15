@@ -3,6 +3,13 @@
     <!-- GWT Boot stuffs -->
     <inherits name="com.github.gwtboot.starter.Starter"/>
 
+    <!-- Domino UI components stuffs -->
+    <inherits name="org.dominokit.domino.ui.DominoUI"/>
+    <!-- <inherits name="org.jboss.elemento.Core"/> -->
+
+    <!-- GSS -->
+    <set-configuration-property name="CssResource.enableGss" value="true"/>
+
     <!-- Entry Point -->
     <entry-point class='com.mochousoft.gwt.client.App'/>
 </module>
