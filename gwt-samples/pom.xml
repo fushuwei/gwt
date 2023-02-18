@@ -13,10 +13,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>gwt-audio</module>
-        <module>gwt-voice</module>
-        <module>gwt-notice</module>
-        <module>gwt-draw-svg</module>
         <module>gwt-widget-wrapper</module>
         <module>gwt-sample-jelement</module>
     </modules>
