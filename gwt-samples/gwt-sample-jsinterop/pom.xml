@@ -5,19 +5,16 @@
 
     <parent>
         <groupId>com.mochousoft</groupId>
-        <artifactId>gwt</artifactId>
+        <artifactId>gwt-samples</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>gwt-samples</artifactId>
+    <artifactId>gwt-sample-jsinterop</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>gwt-sample-uiwrapper</module>
-        <module>gwt-sample-rpc</module>
-        <module>gwt-sample-rest</module>
-        <module>gwt-sample-jsinterop</module>
-        <module>gwt-sample-jelement</module>
+        <module>gwt-sample-jsinterop-java2js</module>
+        <module>gwt-sample-jsinterop-js2java</module>
     </modules>
 
 </project>
