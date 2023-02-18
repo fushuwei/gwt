@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>gwt-boot-basic</module>
         <module>gwt-samples</module>
         <module>gwt-project-admin</module>
     </modules>
