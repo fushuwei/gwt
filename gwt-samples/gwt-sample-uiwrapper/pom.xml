@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>gwt-widget-wrapper</artifactId>
+    <artifactId>gwt-sample-uiwrapper</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
