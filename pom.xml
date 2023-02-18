@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>gwt-rest-springboot-basic</module>
         <module>gwt-jsinterop</module>
         <module>gwt-boot-basic</module>
         <module>gwt-samples</module>
