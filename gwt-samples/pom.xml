@@ -15,6 +15,7 @@
     <modules>
         <module>gwt-sample-uiwrapper</module>
         <module>gwt-sample-rpc</module>
+        <module>gwt-sample-rest</module>
         <module>gwt-sample-jelement</module>
     </modules>
 
