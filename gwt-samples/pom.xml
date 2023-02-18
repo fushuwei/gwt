@@ -13,8 +13,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>gwt-widget-wrapper</module>
         <module>gwt-sample-jelement</module>
+        <module>gwt-sample-rpc</module>
+        <module>gwt-widget-wrapper</module>
     </modules>
 
 </project>
