@@ -4,19 +4,18 @@ This project was generated using the `gwt-maven-springboot-archetype`!
 
 ======================================================================
 
-To run the examples:
+To run the examples on `gwt-sample-rpc` directory:
 
 * run in one terminal window:
 
-    - mvn clean compile
-
-    - mvn gwt:codeserver -pl *-client -am
+  - mvn clean compile
+  - mvn gwt:codeserver -pl *-client -am
 
 Wait until codeserver is startet (it is started, in case you see the codeserver url). after a `mvn clean` is this necessary because the `launcherdir` has to be created inside the Spring Boot server before launching the Sprin Boot server.
 
 * in another terminal window:
 
-    - mvn spring-boot:run -pl *-server -am
+  - mvn spring-boot:run -pl *-server -am
 
 To start the application, call:
 
