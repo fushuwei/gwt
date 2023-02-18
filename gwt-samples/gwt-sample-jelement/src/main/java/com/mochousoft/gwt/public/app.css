@@ -1,0 +1,39 @@
+#demoContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#svgElement {
+    border: 1px solid #404040;
+    margin: 4px 0 4px 4px;
+    cursor: default;
+}
+
+#toolbar {
+    margin: 4px 0 4px 0;
+    display: inline-flex;
+    flex-direction: column;
+    width: 45px;
+    background-color: #e0e0e0;
+    border: 1px solid #404040;
+    border-left: 0;
+}
+
+#btnRedo, #btnUndo, #colorPicker, #btnDownload {
+    width: 44px;
+    height: 36px;
+}
+
+button[disabled] img {
+    opacity: 0.3;
+}
+
+#name {
+    width: 110px;
+    font-size: 16pt;
+    font-weight: bold;
+    white-space: nowrap;
+    transform: translate(-31%, 200%) rotate(-90deg);
+    text-shadow: -1px -1px white, -1px -1px white, -1px -1px white, -1px -1px white;
+    color: #2a4194;
+}
