@@ -86,14 +86,6 @@
                     <artifactId>gwt-maven-plugin</artifactId>
                     <version>${gwt-maven-plugin.version}</version>
                     <extensions>true</extensions>
-                    <dependencies>
-                        <!-- Resolve that gwt code server process cannot be closed under windows -->
-                        <dependency>
-                            <groupId>org.codehaus.plexus</groupId>
-                            <artifactId>plexus-utils</artifactId>
-                            <version>${plexus-utils.version}</version>
-                        </dependency>
-                    </dependencies>
                     <configuration>
                         <sourceLevel>${maven.compiler.source}</sourceLevel>
                         <failOnError>true</failOnError>
