@@ -10,7 +10,6 @@
     </parent>
 
     <artifactId>gwt-sample-dominoui-basic-shared</artifactId>
-    <packaging>gwt-app</packaging>
 
     <build>
         <!-- Resource Directory -->
