@@ -5,11 +5,11 @@
 
     <parent>
         <groupId>com.mochousoft</groupId>
-        <artifactId>gwt-base-codeserver</artifactId>
+        <artifactId>gwt-codeserver</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>gwt-base-codeserver-shared</artifactId>
+    <artifactId>gwt-codeserver-shared</artifactId>
 
     <build>
         <!-- Resource Directory -->

@@ -5,23 +5,23 @@
 
     <parent>
         <groupId>com.mochousoft</groupId>
-        <artifactId>gwt-base-codeserver</artifactId>
+        <artifactId>gwt-codeserver</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>gwt-base-codeserver-client</artifactId>
+    <artifactId>gwt-codeserver-client</artifactId>
     <packaging>gwt-app</packaging>
 
     <dependencies>
         <!-- Shared Module -->
         <dependency>
             <groupId>com.mochousoft</groupId>
-            <artifactId>gwt-base-codeserver-shared</artifactId>
+            <artifactId>gwt-codeserver-shared</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.mochousoft</groupId>
-            <artifactId>gwt-base-codeserver-shared</artifactId>
+            <artifactId>gwt-codeserver-shared</artifactId>
             <version>${project.version}</version>
             <classifier>sources</classifier>
         </dependency>

@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>gwt-base-codeserver</artifactId>
+    <artifactId>gwt-codeserver</artifactId>
     <packaging>pom</packaging>
 
     <properties>
@@ -28,9 +28,9 @@
     </properties>
 
     <modules>
-        <module>gwt-base-codeserver-client</module>
-        <module>gwt-base-codeserver-shared</module>
-        <module>gwt-base-codeserver-server</module>
+        <module>gwt-codeserver-client</module>
+        <module>gwt-codeserver-shared</module>
+        <module>gwt-codeserver-server</module>
     </modules>
 
     <dependencyManagement>

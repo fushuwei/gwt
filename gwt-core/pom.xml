@@ -3,14 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mochousoft</groupId>
-    <artifactId>gwt</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <parent>
+        <groupId>com.mochousoft</groupId>
+        <artifactId>gwt</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>gwt-core</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>gwt-core</module>
-        <module>gwt-samples</module>
+        <module>gwt-codeserver</module>
     </modules>
 
 </project>

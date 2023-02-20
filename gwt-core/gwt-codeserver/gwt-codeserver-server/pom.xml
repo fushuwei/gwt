@@ -5,18 +5,18 @@
 
     <parent>
         <groupId>com.mochousoft</groupId>
-        <artifactId>gwt-base-codeserver</artifactId>
+        <artifactId>gwt-codeserver</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>gwt-base-codeserver-server</artifactId>
+    <artifactId>gwt-codeserver-server</artifactId>
     <packaging>war</packaging>
 
     <dependencies>
         <!-- Shared Module -->
         <dependency>
             <groupId>com.mochousoft</groupId>
-            <artifactId>gwt-base-codeserver-shared</artifactId>
+            <artifactId>gwt-codeserver-shared</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -78,7 +78,7 @@
             <dependencies>
                 <dependency>
                     <groupId>com.mochousoft</groupId>
-                    <artifactId>gwt-base-codeserver-client</artifactId>
+                    <artifactId>gwt-codeserver-client</artifactId>
                     <version>${project.version}</version>
                     <type>war</type>
                     <scope>runtime</scope>
