@@ -19,6 +19,7 @@
         <module>gwt-sample-jsinterop</module>
         <module>gwt-sample-gwtboot</module>
         <module>gwt-sample-jelement</module>
+        <module>gwt-sample-dominoui-basic</module>
     </modules>
 
 </project>
