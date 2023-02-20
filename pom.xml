@@ -11,6 +11,7 @@
     <modules>
         <module>gwt-samples</module>
         <module>gwt-project-admin</module>
+        <module>gwt-base-codeserver</module>
     </modules>
 
 </project>
