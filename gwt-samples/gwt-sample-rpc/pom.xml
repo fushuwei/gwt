@@ -90,6 +90,7 @@
                     <version>${gwt-maven-plugin.version}</version>
                     <extensions>true</extensions>
                     <dependencies>
+                        <!-- Resolve that gwt:codeserver process cannot be closed under windows -->
                         <dependency>
                             <groupId>org.codehaus.plexus</groupId>
                             <artifactId>plexus-utils</artifactId>
