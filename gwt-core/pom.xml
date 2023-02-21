@@ -14,6 +14,7 @@
 
     <modules>
         <module>gwt-codeserver</module>
+        <module>gwt-devmode</module>
     </modules>
 
 </project>
