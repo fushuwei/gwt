@@ -16,7 +16,7 @@
 
 `cd PROJECT_ROOT_DIR`
 
-`mvn gwt:codeserver -pl *-client -am`
+`mvn gwt:codeserver -pl *-client -am -Denv=dev`
 
 ## Browse Page
 

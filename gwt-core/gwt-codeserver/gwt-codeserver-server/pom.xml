@@ -45,6 +45,23 @@
 
     <!-- 环境配置 -->
     <profiles>
+        <!-- prod -->
+        <profile>
+            <id>env-prod</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.mochousoft</groupId>
+                    <artifactId>gwt-codeserver-client</artifactId>
+                    <version>${project.version}</version>
+                    <type>war</type>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+
         <!-- dev -->
         <profile>
             <id>env-dev</id>
@@ -67,23 +84,6 @@
                     </plugins>
                 </pluginManagement>
             </build>
-        </profile>
-
-        <!-- prod -->
-        <profile>
-            <id>env-prod</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>com.mochousoft</groupId>
-                    <artifactId>gwt-codeserver-client</artifactId>
-                    <version>${project.version}</version>
-                    <type>war</type>
-                    <scope>runtime</scope>
-                </dependency>
-            </dependencies>
         </profile>
     </profiles>
 
