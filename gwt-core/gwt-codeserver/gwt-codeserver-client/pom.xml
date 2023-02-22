@@ -56,4 +56,36 @@
         </plugins>
     </build>
 
+    <!-- 环境配置 -->
+    <profiles>
+        <!-- dev -->
+        <profile>
+            <id>env-dev</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>dev</value>
+                </property>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>net.ltgt.gwt.maven</groupId>
+                            <artifactId>gwt-maven-plugin</artifactId>
+                            <dependencies>
+                                <!-- Resolve that gwt:codeserver process cannot be closed under windows -->
+                                <dependency>
+                                    <groupId>org.codehaus.plexus</groupId>
+                                    <artifactId>plexus-utils</artifactId>
+                                    <version>${plexus-utils.version}</version>
+                                </dependency>
+                            </dependencies>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
+
 </project>

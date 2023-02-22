@@ -108,7 +108,7 @@
                     </executions>
                 </plugin>
 
-                <!-- Tomcat Plugin -->
+                <!-- Tomcat Maven Plugin -->
                 <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
                     <artifactId>tomcat7-maven-plugin</artifactId>
