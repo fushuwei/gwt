@@ -18,11 +18,11 @@
 
 1. Edit Configurations -> JavaScript Debug -> URL
 
-   `http://localhost:8888/app/` *OR* `http://localhost:63342/gwt/gwt-samples/gwt-sample-gwtboot/target/gwt/devmode/war/app/index.html`
+`http://localhost:8888/app/` *OR* `http://localhost:63342/gwt/gwt-samples/gwt-sample-gwtboot/target/gwt/devmode/war/app/index.html`
 
 2. Allow unsigned requests (Optional, Must be configured only when first step config url as http://<span></span>localhost:63342/...)
 
-   `Settings -> Build, Execution, Deployment -> Debugger -> Allow unsigned requests`
+`Settings -> Build, Execution, Deployment -> Debugger -> Allow unsigned requests`
 
 3. Config local-remote-mapping (Optional)
 
